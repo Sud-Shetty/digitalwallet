@@ -4,6 +4,7 @@ import dev.sud.digitalwallet.utility.AccountNumberGenerator;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -12,10 +13,10 @@ import java.util.TreeSet;
 public class Account {
     private int accountNumber;
     private User user;
-    private long balance;
+    private BigDecimal balance;
     private Set<Transaction> transactions;
 
-    public Account(String name,long balance){
+    public Account(String name, BigDecimal balance){
         this.user=new User(name);
         this.balance=balance;
         this.accountNumber= AccountNumberGenerator.getNextAccountNumber();

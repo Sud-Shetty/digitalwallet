@@ -3,6 +3,7 @@ package dev.sud.digitalwallet.models;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Getter
@@ -10,10 +11,10 @@ import java.util.Date;
 public class Transaction {
     private int from;
     private int to;
-    private long amount;
+    private BigDecimal amount;
     private Date date;
 
-    public Transaction(int from, int to, long amount, Date date){
+    public Transaction(int from, int to, BigDecimal amount, Date date){
         this.from=from;
         this.to=to;
         this.amount=amount;

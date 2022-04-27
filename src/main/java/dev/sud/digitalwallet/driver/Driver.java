@@ -3,6 +3,7 @@ package dev.sud.digitalwallet.driver;
 import dev.sud.digitalwallet.services.WalletService;
 
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 
@@ -24,7 +25,7 @@ public class Driver {
                     System.out.println("Enter name");
                     String name = sc.next();
                     System.out.println("Enter amount");
-                    long amount = sc.nextLong();
+                    BigDecimal amount = sc.nextBigDecimal();
                     wService.createWallet(name, amount);
                     break;
 
@@ -35,7 +36,7 @@ public class Driver {
                     System.out.println("Enter RECEIVER account number");
                     int to = sc.nextInt();
                     System.out.println("Enter amount");
-                    long amount1 = sc.nextLong();
+                    BigDecimal amount1 = sc.nextBigDecimal();
                     wService.transfer(from, to, amount1);
                     break;
 
