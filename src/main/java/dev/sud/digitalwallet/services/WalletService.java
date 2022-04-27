@@ -1,6 +1,6 @@
 package dev.sud.digitalwallet.services;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
+
 import dev.sud.digitalwallet.dao.WalletDao;
 import dev.sud.digitalwallet.models.Account;
 import dev.sud.digitalwallet.models.Transaction;
